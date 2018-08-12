@@ -1,0 +1,23 @@
+{
+  "name": "film",
+  "version": "1.0.0",
+  "description": "koa2+mongoose+mongodb",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjwjwjwjwjwj/film.git"
+  },
+  "author": "wj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjwjwjwjwjwj/film/issues"
+  },
+  "homepage": "https://github.com/wjwjwjwjwjwj/film#readme",
+  "dependencies": {
+    "koa": "^2.5.2"
+  }
+}
