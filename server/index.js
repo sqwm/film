@@ -5,6 +5,6 @@ app.use(async (ctx, next) => {
     ctx.body = '电影首页';
 });
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log('服务启动成功')
 });
