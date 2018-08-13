@@ -52,7 +52,7 @@ const sleep = time => new Promise(resolve => {
         return links
     });
     console.log("等待结果");
-
-    console.log(result);
     browser.close();
+    process.send({result});
+    process.exit(0);
 })();
