@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const url = `https://movie.douban.com/tag/#/?sort=R&range=6,10&tags=`;
+const url = `https://movie.douban.com/tag/#/?sort=T&range=6,10&tags=`;
 const sleep = time => new Promise(resolve => {
     setTimeout(resolve, time)
 });
@@ -13,21 +13,16 @@ const sleep = time => new Promise(resolve => {
     await page.goto(url, {
         waitUntil: 'networkidle2'
     });
-    console.log("循环一次结束");
 
     await sleep(3000);
-    console.log("循环2次结束");
 
     await page.waitForSelector('.more');
 
-    console.log("循环3次结束");
 
     for (let i = 0; i < 1; i++) {
         await sleep(3000);
         await page.click('.more');
-        console.log("for循环结束");
     }
-    console.log("循环4次结束");
 
     const result = await page.evaluate(() => {
         let $ = window.$;
@@ -51,7 +46,6 @@ const sleep = time => new Promise(resolve => {
         }
         return links
     });
-    console.log("等待结果");
     browser.close();
     process.send({result});
     process.exit(0);
